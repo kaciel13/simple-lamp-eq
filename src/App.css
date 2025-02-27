@@ -1,0 +1,32 @@
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.lamp{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.lamp-image {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  width: auto; /* Автоматическая ширина */
+  height: auto; /* Автоматическая высота */
+  max-width: 90%; /* Ограничиваем максимальную ширину */
+  max-height: 90%; /* Ограничиваем максимальную высоту */
+  transform: scaleY(-1); /* Переворот по вертикали */
+  filter: brightness(1%);
+  transition: filter 1s;
+
+}
+
+
+.lamp-image:hover {
+  filter: brightness(100%); /* Изменяем цвет при наведении */
+}
