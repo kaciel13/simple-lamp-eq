@@ -12,21 +12,41 @@
 
 }
 
-.lamp-image {
-  position:absolute;
+.lamp-image1,
+.lamp-image2,
+.lamp-image3{
+  position: absolute;
   top: 0;
   bottom: 0;
   width: auto; /* Автоматическая ширина */
   height: auto; /* Автоматическая высота */
-  max-width: 90%; /* Ограничиваем максимальную ширину */
-  max-height: 90%; /* Ограничиваем максимальную высоту */
+  max-width: 80%; /* Ограничиваем максимальную ширину */
+  max-height: 80%; /* Ограничиваем максимальную высоту */
   transform: scaleY(-1); /* Переворот по вертикали */
   filter: brightness(1%);
-  transition: filter 1s;
+  transition: 
+  filter 5s, /* Переход для фильтра */
+  drop-shadow 5s, /* Переход для тени */
+  blur 5s; 
+  
+}
+.lamp-image1{
+  z-index: 1;
+}
+.lamp-image2{
+  z-index: 2;
+  transition: 
+  filter 5s, /* Переход для фильтра */
+  drop-shadow 5s, /* Переход для тени */
+  blur 5s; /* Переход для размытия */
 
 }
-
-
-.lamp-image:hover {
-  filter: brightness(100%); /* Изменяем цвет при наведении */
+.lamp-image3{
+  z-index: 3;
 }
+
+.lamp-image3:hover{
+  
+  filter: brightness(100%) drop-shadow(0 50px 100px white) opacity(100%);
+}
+
